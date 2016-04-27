@@ -6,6 +6,7 @@ module Fluent
     PRINT_FORMAT_ALL  = "summary = %10d in %5ds = %10.3f/s Avg"
 
     config_param :path, :string, :default => nil
+    config_param :verbose, :bool, :default => true
 
     # This method is called before starting.
     def configure(conf)
@@ -42,7 +43,7 @@ module Fluent
           @date_index = next_time.strftime("%s")
           @counter[tmp_index].each{|key, value|
             total_val += value
-            printer "#{sprintf(PRINT_FORMAT_EACH, value, interval, value.quo(interval).to_f, key)}"
+            printer "#{sprintf(PRINT_FORMAT_EACH, value, interval, value.quo(interval).to_f, key)}" if @verbose
           }
           printer "#{sprintf(PRINT_FORMAT_ALL, total_val, interval, total_val.quo(interval).to_f)}"
           @counter.delete(tmp_index)
