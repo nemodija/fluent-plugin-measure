@@ -35,17 +35,18 @@ module Fluent
 
     def print_measure(s_time = Time.now)
       interval = 60
-      next_time = s_time + interval
+      next_time = s_time + interval - s_time.sec
       loop do
         timer(next_time) do
           tmp_index = @date_index
           total_val = 0
           @date_index = next_time.strftime("%s")
+          latency = @date_index.to_i - tmp_index.to_i
           @counter[tmp_index].each{|key, value|
             total_val += value
-            printer "#{sprintf(PRINT_FORMAT_EACH, value, interval, value.quo(interval).to_f, key)}" if @verbose
+            printer "#{sprintf(PRINT_FORMAT_EACH, value, latency, value.quo(interval).to_f, key)}" if @verbose
           }
-          printer "#{sprintf(PRINT_FORMAT_ALL, total_val, interval, total_val.quo(interval).to_f)}"
+          printer "#{sprintf(PRINT_FORMAT_ALL, total_val, latency, total_val.quo(interval).to_f)}"
           @counter.delete(tmp_index)
         end
         next_time += interval
