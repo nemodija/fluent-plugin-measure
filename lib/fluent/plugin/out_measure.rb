@@ -45,7 +45,7 @@ module Fluent
           @counter[tmp_index].each{|key, value|
             total_val += value
             printer "#{sprintf(PRINT_FORMAT_EACH, value, latency, value.quo(interval).to_f, key)}" if @verbose
-          }
+          } unless @counter[tmp_index].nil?
           printer "#{sprintf(PRINT_FORMAT_ALL, total_val, latency, total_val.quo(interval).to_f)}"
           @counter.delete(tmp_index)
         end
