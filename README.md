@@ -15,6 +15,7 @@ gem install fluent-plugin-measure-0.0.1.gem
 |---|---|---|---|---|
 |path|出力先のファイルパス|string|no|nil|
 |verbose|タグ単位の測定結果も出力するかどうか|bool|no|true|
+|expire|計測結果を保持する期間を指定|integer|no|1800(sec)|
 
 ## Usage
 
