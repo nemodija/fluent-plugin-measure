@@ -20,7 +20,6 @@ module Fluent
       when Time    then arg - Time.now
       when String  then Time.parse(arg) - Time.now
       else raise   end
-
       sleep x if block_given?
       yield
     end
@@ -44,9 +43,9 @@ module Fluent
           latency = @date_index.to_i - tmp_index.to_i
           @counter[tmp_index].each{|key, value|
             total_val += value
-            printer "#{sprintf(PRINT_FORMAT_EACH, value, latency, value.quo(interval).to_f, key)}" if @verbose
+            printer "#{sprintf(PRINT_FORMAT_EACH, value, latency, value.quo(latency).to_f, key)}" if @verbose
           } unless @counter[tmp_index].nil?
-          printer "#{sprintf(PRINT_FORMAT_ALL, total_val, latency, total_val.quo(interval).to_f)}"
+          printer "#{sprintf(PRINT_FORMAT_ALL, total_val, latency, total_val.quo(latency).to_f)}"
           @counter.delete(tmp_index)
         end
         next_time += interval
@@ -59,7 +58,6 @@ module Fluent
       s_time = Time.now
       @date_index = s_time.strftime("%s")
       @counter = Hash.new
-
       @thread = Thread.new do
         print_measure s_time
       end
