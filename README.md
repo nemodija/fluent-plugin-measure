@@ -1,5 +1,7 @@
 # Fluent::Plugin::Measure
 
+[![Build Status](https://secure.travis-ci.org/nemonium/fluent-plugin-measure.png)](https://travis-ci.org/nemonium/fluent-plugin-measure)
+
 Measure a processing number of time units.
 
 ## Installation
