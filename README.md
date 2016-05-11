@@ -2,6 +2,7 @@
 
 [![Build Status](https://secure.travis-ci.org/nemonium/fluent-plugin-measure.png)](https://travis-ci.org/nemonium/fluent-plugin-measure)
 [![Coverage Status](https://coveralls.io/repos/github/nemonium/fluent-plugin-measure/badge.svg?branch=master)](https://coveralls.io/github/nemonium/fluent-plugin-measure)
+[![Code Climate](https://codeclimate.com/github/nemonium/fluent-plugin-measure/badges/gpa.svg)](https://codeclimate.com/github/nemonium/fluent-plugin-measure)
 
 Measure a processing number of time units.
 
