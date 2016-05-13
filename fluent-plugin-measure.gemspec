@@ -4,11 +4,11 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
     
 Gem::Specification.new do |spec|
   spec.name          = "fluent-plugin-measure"
-  spec.version       = "0.0.1"
+  spec.version       = "0.9.0"
   spec.authors       = ["nemonium"]
   spec.email         = ["kenichiro.nemoto@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{Measurement of requests.}
+  spec.description   = %q{Measurement of requests.}
   spec.homepage      = "https://github.com/nemonium/fluent-plugin-measure"
   spec.license       = "MIT"
 
@@ -20,5 +20,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.6"
   spec.add_development_dependency "rake", "10.4.2"
   spec.add_development_dependency "test-unit"
+  spec.add_development_dependency "coveralls"
   spec.add_runtime_dependency "fluentd"
 end

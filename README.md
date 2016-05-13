@@ -1,12 +1,17 @@
 # Fluent::Plugin::Measure
 
+[![Build Status](https://secure.travis-ci.org/nemonium/fluent-plugin-measure.png)](https://travis-ci.org/nemonium/fluent-plugin-measure)
+[![Coverage Status](https://coveralls.io/repos/github/nemonium/fluent-plugin-measure/badge.svg?branch=master)](https://coveralls.io/github/nemonium/fluent-plugin-measure)
+[![Code Climate](https://codeclimate.com/github/nemonium/fluent-plugin-measure/badges/gpa.svg)](https://codeclimate.com/github/nemonium/fluent-plugin-measure)
+[![Dependency Status](https://gemnasium.com/badges/github.com/nemonium/fluent-plugin-measure.svg)](https://gemnasium.com/github.com/nemonium/fluent-plugin-measure)
+
 Measure a processing number of time units.
 
 ## Installation
 
 ~~~
 gem build fluent-plugin-measure.gemspec
-gem install fluent-plugin-measure-0.0.1.gem
+gem install fluent-plugin-measure-0.9.0.gem
 ~~~
 
 ## Config
@@ -14,6 +19,8 @@ gem install fluent-plugin-measure-0.0.1.gem
 |param|description|type|required|default|
 |---|---|---|---|---|
 |path|出力先のファイルパス|string|no|nil|
+|verbose|タグ単位の測定結果も出力するかどうか|bool|no|true|
+|expire|計測結果を保持する期間を指定|integer|no|1800(sec)|
 
 ## Usage
 
