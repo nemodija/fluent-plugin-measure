@@ -1,9 +1,8 @@
 # Fluent::Plugin::Measure
 
-[![Build Status](https://secure.travis-ci.org/nemonium/fluent-plugin-measure.png)](https://travis-ci.org/nemonium/fluent-plugin-measure)
-[![Coverage Status](https://coveralls.io/repos/github/nemonium/fluent-plugin-measure/badge.svg?branch=master)](https://coveralls.io/github/nemonium/fluent-plugin-measure)
-[![Code Climate](https://codeclimate.com/github/nemonium/fluent-plugin-measure/badges/gpa.svg)](https://codeclimate.com/github/nemonium/fluent-plugin-measure)
-[![Dependency Status](https://gemnasium.com/badges/github.com/nemonium/fluent-plugin-measure.svg)](https://gemnasium.com/github.com/nemonium/fluent-plugin-measure)
+[![Build Status](https://secure.travis-ci.org/nemodija/fluent-plugin-measure.png)](https://travis-ci.org/nemodija/fluent-plugin-measure)
+[![Coverage Status](https://coveralls.io/repos/github/nemodija/fluent-plugin-measure/badge.svg?branch=master)](https://coveralls.io/github/nemodija/fluent-plugin-measure)
+[![Code Climate](https://codeclimate.com/github/nemodija/fluent-plugin-measure/badges/gpa.svg)](https://codeclimate.com/github/nemodija/fluent-plugin-measure)
 
 Measure a processing number of time units.
 
